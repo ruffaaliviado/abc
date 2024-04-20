@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <title>Aliviado</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .container {
+            width: 500px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        input[type=text], input[type=password] {
+            width: 90%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+
+        }
+        
+        input[type=submit]{
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .container input[type=submit]:hover {
+            background-color: #45a049;
+
+        }
+
+        .CreateAcc{
+            text-decoration: none;
+            color: rgb(0,0,0);
+            transition: color 0.5 ease-in;
+        }
+        .CreateAcc :hover{
+            color: rgb(100, 100, 100);
+        }
+        function openMain(){
+        window.location.href = "./home.html";
+    }
+    
+        
+      
+    
+    </style>
+
+    <script>
+             function validateUsername() {
+        var username = document.getElementById("username").value;
+        var usernameError = document.getElementById("usernameError");
+
+        if (username.trim() === "") {
+            usernameError.innerHTML = "Username is required.";
+        } else {
+            usernameError.innerHTML = ""; // Clear error message if valid
+        }
+    }
+
+
+    function openMain(){
+        window.location.href = "./home.html";
+    }
+
+
+
+
+
+    </script>
+
+
+</head>
+<body style="background-color: black;">
+    <center> <h1 style="color: white; background-color:#e8491d" class="container"> Welcome! to WebNovel Stories</h1> </center>
+    <form class="container">
+        <label for="username"> Username: </label>
+        <input type="text" id="username" name="username">
+        <span id="usernameError" class="error"> </span>
+  
+       
+       <label for="password"> Password (at least 8 characters):</label>
+       <input type="password" id="password" name="password" pattern="(8)" title="Password must be at least 8 characters" required>
+       
+        <input type="submit" value="log in" onclick="openMain()">
+       
+       
+
+       <h5><a class="CreateAcc" href="./register.html">Create new account</a></h5>
+       </form>
+      
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
+
